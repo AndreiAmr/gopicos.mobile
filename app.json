@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "gopicos-mobile",
-    "slug": "gopicos-mobile",
+    "slug": "Go Picos",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,20 +11,37 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gopicos.mobile",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Your app requires access to your location to provide certain features, like finding services near you.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Your app requires always-on access to your location to provide notifications and updates about services in your area, even when the app is not in use."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/icon.png"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBUuw3NTwWA1NqJsuBFJVmZPiwfzbLmMv4"
+        }
+      },
+      "package": "com.gopicos.mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ]
   }
 }
