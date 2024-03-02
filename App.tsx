@@ -5,6 +5,7 @@ import InterMedium from '@assets/fonts/Inter-Medium.ttf';
 import InterBold from '@assets/fonts/Inter-Bold.ttf';
 
 import { useFonts } from 'expo-font';
+import { CriticalError } from '@components/atoms/CriticalError';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -17,6 +18,7 @@ export default function App() {
 
   return (
     <Providers>
+      <CriticalError />
       <MainRoutes />
     </Providers>
   );

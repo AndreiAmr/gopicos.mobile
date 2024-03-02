@@ -23,6 +23,7 @@ export const useSignInForms = () => {
       onSubmit: async (userCredentials) => {
         try {
           const response = await signInRequest(userCredentials);
+
           setUser(response);
           navigation.dispatch(
             CommonActions.reset({
@@ -31,7 +32,6 @@ export const useSignInForms = () => {
             })
           );
         } catch (err) {
-          console.log({ err });
           const errorMessage = err.response.data.data.message;
 
           if (errorMessage === SignInErrors.USER_NOT_FOUND) {
