@@ -1,6 +1,7 @@
 import SafeAreaWrapper from '@components/atoms/SafeAreaWrapper';
 import SignInOrganism from '@components/organisms/SignInOrganism';
 import { KeyboardAvoidingView, VStack } from 'native-base';
+import { Dimensions } from 'react-native';
 
 const SignInTemplate = () => {
   return (

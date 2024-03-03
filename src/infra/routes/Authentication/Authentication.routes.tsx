@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignInScreen from '@screens/Authentication/SignIn';
+import SignUpScreen from '@screens/Authentication/SignUp';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,7 +12,13 @@ const AuthenticationRoutes = () => {
       }}
     >
       <Stack.Screen name='SignIn' component={SignInScreen} />
-      {/* <Stack.Screen name='SignUp' component={() => <></>} /> */}
+      <Stack.Screen
+        name='SignUp'
+        component={SignUpScreen}
+        options={{
+          animation: 'slide_from_right',
+        }}
+      />
     </Stack.Navigator>
   );
 };
