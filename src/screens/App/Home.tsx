@@ -8,7 +8,6 @@ const HomeScreen = () => {
   useEffect(() => {
     (async () => {
       try {
-        console.log({ hi: 'trying' });
         let { status } = await Location.requestForegroundPermissionsAsync();
         if (status !== 'granted') {
           console.log('Permission to access location was denied');
@@ -22,8 +21,6 @@ const HomeScreen = () => {
       }
     })();
   }, []);
-
-  console.log({ location });
 
   return (
     <MapView

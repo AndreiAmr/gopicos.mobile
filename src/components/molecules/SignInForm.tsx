@@ -1,11 +1,12 @@
 import Input from '@components/atoms/Input';
 import { Box, Button, HStack, Text } from 'native-base';
+
 import { useSignInForms } from 'src/hooks/logic/useSignInForms';
 
 const SignInForm = () => {
   const {
     items: { values, errors },
-    handlers: { handleChange, handleSubmit },
+    handlers: { handleChange, handleSubmit, navigateToSignUp },
   } = useSignInForms();
 
   return (
@@ -25,7 +26,7 @@ const SignInForm = () => {
 
       <Button
         onPress={() => handleSubmit()}
-        background='cyan.500'
+        background='info.600'
         borderRadius='8px'
         _focus={{
           opacity: 0.2,
@@ -43,7 +44,7 @@ const SignInForm = () => {
         <Text marginRight='2px' fontFamily='regular'>
           Não tem conta ?
         </Text>
-        <Text fontFamily='medium' color='yellow.600'>
+        <Text fontFamily='medium' color='yellow.600' onPress={navigateToSignUp}>
           Cadastre-se!
         </Text>
       </HStack>

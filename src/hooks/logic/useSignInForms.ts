@@ -49,6 +49,14 @@ export const useSignInForms = () => {
   const handleChange = (field: string) => (text: string) =>
     setFieldValue(field, text);
 
+  const navigateToSignUp = () => {
+    navigation.dispatch(
+      CommonActions.navigate({
+        name: 'SignUp',
+      })
+    );
+  };
+
   return {
     items: {
       values,
@@ -57,6 +65,7 @@ export const useSignInForms = () => {
     handlers: {
       handleChange,
       handleSubmit,
+      navigateToSignUp,
     },
   };
 };

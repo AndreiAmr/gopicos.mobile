@@ -3,7 +3,7 @@ import Logo from 'src/assets/svg/Logo';
 
 const AppLogoName = () => {
   return (
-    <HStack alignItems='flex-end'>
+    <HStack alignItems='flex-end' justifyContent='center'>
       <Text fontFamily='Bold' fontSize={28} marginRight={18}>
         GO PICOS
       </Text>

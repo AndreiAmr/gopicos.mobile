@@ -24,7 +24,7 @@ const Input = ({ value, placeholder, error, onChangeText }: InputProps) => {
         borderWidth={1}
         borderColor={error ? 'red.500' : isFocused ? 'yellow.500' : 'light.400'}
         borderRadius={8}
-        height='47px'
+        height='45px'
       >
         <NativeInput
           onFocus={() => setIsFocused(true)}

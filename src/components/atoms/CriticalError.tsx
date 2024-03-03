@@ -17,7 +17,7 @@ export const CriticalError = () => {
           <Modal.Body w='100%'>
             <HStack justifyContent='space-between' alignItems='center'>
               <Text fontWeight='bold' color='danger.500' fontSize={18}>
-                Opps...
+                Opps...!
               </Text>
               <LottieView
                 autoPlay
